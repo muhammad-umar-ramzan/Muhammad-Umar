@@ -15,7 +15,7 @@ import numpy from './tech/nodejs.png';
 import scikitlearn from './tech/dataanalysis.png';
 import panda from './tech/keras.png';
 import nlp from './tech/NLP.jpeg';
-import tensorflow from './tech/tensorfflow.png';
+import tensorflow from './tech/tensorflow.png';
 import flask from './tech/flask.png';
 import doctoratwork from './company/ds.png';
 import doctoratwork1 from './company/doctoratwork1.png';
