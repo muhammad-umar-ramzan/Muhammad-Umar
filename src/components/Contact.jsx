@@ -51,47 +51,39 @@ const Contact = () => {
 			.then(() => {
 				setLoading(false);
 				// ✅ Show success notification
-				toast.success(`✅ Thank you, ${form.name}! Your message has been sent successfully.`, {
-					position: "top-right",
-					autoClose: 5000,
-					hideProgressBar: false,
-					closeOnClick: true,
-					pauseOnHover: true,
-					draggable: true,
-				});
+				toast.success(`✅ Thank you, ${form.name}! Your message has been sent successfully.`);
 				setForm({ name: '', email: '', message: '' });
 			})
 			.catch((error) => {
 				setLoading(false);
 				console.error("❌ Email Send Error:", error);
 				// ✅ Show error notification
-				toast.error("❌ Oops! Something went wrong. Please try again.", {
-					position: "top-right",
-					autoClose: 5000,
-					hideProgressBar: false,
-					closeOnClick: true,
-					pauseOnHover: true,
-					draggable: true,
-				});
+				toast.error("❌ Oops! Something went wrong. Please try again.");
 			});
 		} else {
 			// ✅ Show warning notification
-			toast.warn("⚠️ Please fill all the fields before submitting.", {
-				position: "top-right",
-				autoClose: 3000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-			});
+			toast.warn("⚠️ Please fill all the fields before submitting.");
 		}
 	};
 
 	return (
 		<>
 			{/* ✅ Toast Notification Container */}
-			<ToastContainer />
-			
+			<ToastContainer
+	position="bottom-right" // 👈 Notification neeche corner pe aayega
+	autoClose={5000}
+	hideProgressBar={false}
+	closeOnClick
+	pauseOnHover
+	draggable
+	toastStyle={{ zIndex: 9999 }}
+	style={{
+		zIndex: 9999, 
+		bottom: "20px", // 👈 Bottom se margin diya
+		right: "10px",
+	}}
+/>
+
 			<div className='xl:mt-12 lg:flex-row flex-col-reverse flex justify-center items-center gap-8 overflow-hidden'>
 				<motion.div
 					variants={slideIn('left', 'tween', 0.2, 1)}

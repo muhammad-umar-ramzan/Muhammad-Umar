@@ -4,38 +4,30 @@ import { Suspense } from 'react';
 import CanvasLoader from '../Loader';
 
 const Earth = () => {
-  const earth = useGLTF('./planet/scene.gltf');
-
-  return (
-    <primitive 
-      object={earth.scene} 
-      scale={1.8} // Reduced size for performance 
-      position-y={0} 
-      rotation-y={0} 
-    />
-  );
+  const earth = useGLTF('/planet/scene.gltf'); // GLB use karo (faster & lightweight)
+  return <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />;
 };
 
 const EarthCanvas = () => {
   return (
     <Canvas
-      frameloop="demand" // Renders only when needed, better for performance
+      frameloop="demand" // Optimize rendering (better performance)
       shadows
-      dpr={[1, 1.5]} // Adjusts resolution dynamically for smoother rendering
-      performance={{ min: 0.5, max: 1 }} // Helps reduce unnecessary rendering
+      dpr={[1, 1.5]} // Adjust resolution for better performance
       camera={{
-        fov: 40,
+        fov: 35,
         near: 0.1,
-        far: 100, // Reduced to optimize rendering
-        position: [-3, 2, 5],
+        far: 200,
+        position: [-4, 3, 6],
       }}
-      gl={{ antialias: true, powerPreference: 'low-power' }} // Optimized GPU settings
+      gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          enableZoom={false}
           autoRotate
-          autoRotateSpeed={0.6} // Smoother rotation
+          autoRotateSpeed={0.5} // Slow rotation to avoid high GPU usage
+          enableZoom={false}
+          enableDamping={true} // Smooth rotation
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
