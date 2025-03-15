@@ -6,7 +6,7 @@ import { styles } from '../styles/';
 import { slideIn } from '../utils/motion';
 import { EarthCanvas } from './canvas';
 
-// ✅ Import react-toastify
+// Import react-toastify
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -50,27 +50,27 @@ const Contact = () => {
 			)
 			.then(() => {
 				setLoading(false);
-				// ✅ Show success notification
+				// Show success notification
 				toast.success(`Thank you, ${form.name}! Your message has been sent successfully.`);
 				setForm({ name: '', email: '', message: '' });
 			})
 			.catch((error) => {
 				setLoading(false);
 				console.error("❌ Email Send Error:", error);
-				// ✅ Show error notification
+				// Show error notification
 				toast.error("❌ Oops! Something went wrong. Please try again.");
 			});
 		} else {
-			// ✅ Show warning notification
+			// Show warning notification
 			toast.warn("⚠️ Please fill all the fields before submitting.");
 		}
 	};
 
 	return (
 		<>
-			{/* ✅ Toast Notification Container */}
+			{/*Toast Notification Container */}
 			<ToastContainer
-	position="top-right" // "bottom-right" bhi use kar sakte ho
+	position="top-right"
 	autoClose={5000}
 	hideProgressBar={false}
 	closeOnClick
@@ -80,7 +80,7 @@ const Contact = () => {
 	style={{
 		zIndex: 9999, 
 		position: "fixed", 
-		top: "65px", // 👈 Navbar se neeche kar diya
+		top: "65px", 
 		right: "10px",
 	}}
 />
