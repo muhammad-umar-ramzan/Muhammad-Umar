@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className={`${styles.paddingX} w-full max-w-7xl flex justify-between items-center sm:py-5 py-4 mx-auto`}>
         <Link
           to='/'
-          className='flex items-center gap-2'
+          className='flex items-center gap-3'
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
@@ -41,7 +41,7 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-15 h-12' />
           <p className='flex text-white text-[18px] font-bold cursor-pointer hover:text-primary'>
-            Muhammad&ensp;<span>Umar</span>
+            Muhammad Umar
           </p>
         </Link>
 
