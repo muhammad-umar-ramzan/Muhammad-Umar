@@ -51,7 +51,7 @@ const Contact = () => {
 			.then(() => {
 				setLoading(false);
 				// ✅ Show success notification
-				toast.success(`✅ Thank you, ${form.name}! Your message has been sent successfully.`);
+				toast.success(`Thank you, ${form.name}! Your message has been sent successfully.`);
 				setForm({ name: '', email: '', message: '' });
 			})
 			.catch((error) => {
