@@ -6,6 +6,7 @@ import logo from './logo3.png';
 import menu from './menu.svg';
 import mobile from './mobile.png';
 import web from './web.png';
+import computer from './computer.jpg';
 import ai from './tech/AI.avif';
 import javascript from './tech/javascript.png';
 import nextjs from './tech/nextjs.svg';
@@ -61,5 +62,6 @@ export {
 	seo,
 	posture,
 	flask,
-	hr
+	hr,
+	computer
 };

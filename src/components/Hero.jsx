@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
+// import { ComputersCanvas } from './canvas';
 import { useState, useEffect } from 'react';
 
 const taglineWords = [
@@ -51,7 +51,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className='max-h-[500px] xs:max-h-[600px] md:max-h-full h-full relative top-1/2 -translate-y-1/2'>
-				<ComputersCanvas />
+				
 			</div>
 			<div className='absolute xs:bottom-4 bottom-32 w-full flex justify-center items-center z-10'>
 				<a href='#about'>
