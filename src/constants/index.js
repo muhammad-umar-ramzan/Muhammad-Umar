@@ -276,32 +276,32 @@ const projects = [{
 		source_code_link: 'https://github.com/muhammad-umar-ramzan/Umar-s-Chatbot.git',
 		website_link: 'https://umar-chatbot.streamlit.app/',
 	},
-	{
-		name: 'SEO Content Optimizer',
-		description:
-			'Web application that helps optimize content for search engines by analyzing keywords, readability, and SEO score. The tool provides actionable recommendations to improve rankings.',
-		tags: [
-			{
-				name: 'html & css',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'javascript',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'nlp',
-				color: 'pink-text-gradient',
-			},
-			{
-				name: 'flask',
-				color: 'yellow-text-gradient',
-			},
-		],
-		image: seo,
-		source_code_link: 'https://github.com/muhammad-umar-ramzan/SEO-Content-Optimizer',
-		website_link: 'https://github.com/muhammad-umar-ramzan/SEO-Content-Optimizer',
-	},
+	// {
+	// 	name: 'SEO Content Optimizer',
+	// 	description:
+	// 		'Web application that helps optimize content for search engines by analyzing keywords, readability, and SEO score. The tool provides actionable recommendations to improve rankings.',
+	// 	tags: [
+	// 		{
+	// 			name: 'html & css',
+	// 			color: 'blue-text-gradient',
+	// 		},
+	// 		{
+	// 			name: 'javascript',
+	// 			color: 'green-text-gradient',
+	// 		},
+	// 		{
+	// 			name: 'nlp',
+	// 			color: 'pink-text-gradient',
+	// 		},
+	// 		{
+	// 			name: 'flask',
+	// 			color: 'yellow-text-gradient',
+	// 		},
+	// 	],
+	// 	image: seo,
+	// 	source_code_link: 'https://github.com/muhammad-umar-ramzan/SEO-Content-Optimizer',
+	// 	website_link: 'https://github.com/muhammad-umar-ramzan/SEO-Content-Optimizer',
+	// },
 	{
 		name: 'HR Dashboard',
 		description:
