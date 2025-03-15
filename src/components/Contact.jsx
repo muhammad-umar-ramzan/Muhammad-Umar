@@ -70,19 +70,21 @@ const Contact = () => {
 		<>
 			{/* ✅ Toast Notification Container */}
 			<ToastContainer
-	position="bottom-right" // 👈 Notification neeche corner pe aayega
+	position="top-right" // "bottom-right" bhi use kar sakte ho
 	autoClose={5000}
 	hideProgressBar={false}
 	closeOnClick
 	pauseOnHover
 	draggable
-	toastStyle={{ zIndex: 9999 }}
+	toastStyle={{ zIndex: 9999 }} 
 	style={{
 		zIndex: 9999, 
-		bottom: "20px", // 👈 Bottom se margin diya
+		position: "fixed", 
+		top: "65px", // 👈 Navbar se neeche kar diya
 		right: "10px",
 	}}
 />
+
 
 			<div className='xl:mt-12 lg:flex-row flex-col-reverse flex justify-center items-center gap-8 overflow-hidden'>
 				<motion.div
