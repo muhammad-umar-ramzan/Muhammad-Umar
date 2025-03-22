@@ -12,9 +12,17 @@ import javascript from './tech/javascript.png';
 import nextjs from './tech/nextjs.svg';
 import python from './tech/python.svg';
 import sql from './tech/sql.png';
-import numpy from './tech/nodejs.png';
-import scikitlearn from './tech/dataanalysis.png';
-import panda from './tech/keras.png';
+import nodejs from './tech/nodejs.png';
+import 	analtics from './tech/dataanalysis.png';
+import keras from './tech/keras.png';
+
+import pandas from './tech/Pandas.png';
+import numpy from './tech/Numpy.png';
+import matplotlib from './tech/Matplotlib.webp';
+import scikitlearn from './tech/Scikitlearn.png';
+
+
+
 import nlp from './tech/NLP.jpeg';
 import tensorflow from './tech/Tensorflow.png';
 import flask from './tech/flask.png';
@@ -25,6 +33,10 @@ import house from './house.png';
 import skin from './skin.png';
 import posture from './posture.png';
 import chatbot from './chatbot.png';
+import customer from './customer.png';
+import attrition from './attrition.jpg';
+
+
 import seo from './seo.png';
 import hr from './hr.png';
 import discord from './socials/discord.png';
@@ -39,7 +51,7 @@ export {
 	doctoratwork1,
 	freelance,
 	sql,
-	scikitlearn,
+	analtics,
 	github,
 	github_alt,
 	gotosite,
@@ -50,9 +62,9 @@ export {
 	mobile,
 	nextjs,
 	python,
-	panda,
+	keras,
 	web,
-	numpy,
+	nodejs,
 	ai,
 	nlp,
 	tensorflow,
@@ -63,5 +75,11 @@ export {
 	posture,
 	flask,
 	hr,
-	computer
+	computer,
+	customer,
+	attrition,
+	pandas,
+	numpy,
+    matplotlib,
+    scikitlearn,
 };

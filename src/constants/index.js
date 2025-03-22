@@ -6,7 +6,7 @@ import {
 	doctoratwork1,
 	freelance,
 	sql,
-	scikitlearn,
+	analtics,
 	github,
 	github_alt,
 	gotosite,
@@ -17,9 +17,9 @@ import {
 	mobile,
 	nextjs,
 	python,
-	panda,
+	keras,
 	web,
-	numpy,
+	nodejs,
 	ai,
 	nlp,
 	tensorflow,
@@ -29,7 +29,13 @@ import {
 	seo,
 	posture,
 	flask,
-	hr
+	hr,
+	customer,
+	attrition,
+	pandas,
+	numpy,
+    matplotlib,
+    scikitlearn,
 } from '../assets';
 
 // const githubUser = import.meta.env.VITE_APP_GITHUB_USER;
@@ -65,12 +71,31 @@ const technologies = [
 		icon: nlp,
 	},
 	{
+		name: 'Data Analtics',
+		icon: analtics,
+	},
+
+
+
+	{
+		name: 'Pandas',
+		icon: pandas,
+	},{
+		name: 'Numpy',
+		icon: numpy,
+	},{
+		name: 'Matplotlib',
+		icon: matplotlib,
+	},{
 		name: 'Scikitlearn',
 		icon: scikitlearn,
 	},
+
+
+
 	{
-		name: 'Pandas',
-		icon: panda,
+		name: 'Keras',
+		icon: keras,
 	},
 	{
 		name: 'Tensorflow',
@@ -86,8 +111,8 @@ const technologies = [
 		icon: flask,
 	},
 	{
-		name: 'Numpy',
-		icon: numpy,
+		name: 'Nodejs',
+		icon: nodejs,
 	},
 	{
 		name: 'sql',
@@ -135,15 +160,27 @@ if (months > 12) {
 
 const experiences = [
 	{
-		title: 'Machine Learning Intern',
+		title: 'AI Engineer',
+		company_name: 'WebFix',
+		icon: freelance,
+		iconBg: '#383E56',
+		date: `Feb 2025 - Present`,
+		points: [
+			"Developing AI chatbots with NLP for automated customer interactions.",
+		"Training deep learning models for predictions and recommendations.",
+		"Building scalable ML APIs for AI-driven web applications."
+		],
+	},
+	{
+		title: 'ML Engineer Intern',
 		company_name: 'Technocolabs Softwares',
 		icon: freelance,
 		iconBg: '#383E56',
 		date: `Octobor 2024 - Present`,
 		points: [
-			"Developing and deploying machine learning models to analyze employee attrition and provide actionable insights.",
-		"Conducting data preprocessing, feature engineering, and visualization to enhance model accuracy and interpretability.",
-		"Collaborating with cross functional teams to integrate AI driven solutions into web applications for real world impact."
+			"Building ML models for employee attrition analysis and insights.",
+		"Performing data preprocessing, feature engineering, and visualization.",
+		"Integrating AI solutions into web applications with cross-team collaboration."
 		],
 	},
 	{
@@ -153,21 +190,21 @@ const experiences = [
 		iconBg: '#383E56',
 		date: 'July 2024 - September 2024',
 		points: [
-			"Worked on large scale data science projects, analyzing real world datasets to extract insights.",
-			"Performed web scraping and data collection to build high quality datasets for machine learning models.",
-			"Collaborated with teams to develop and optimize predictive models, improving data driven decision making."
+			"Analyzed large-scale real-world datasets for insights.",
+		"Built high-quality ML datasets through web scraping.",
+		"Optimized predictive models for data-driven decisions."
 		],
 	},
 	{
-		title: 'Machine Learning Intern',
+		title: 'ML Engineer Intern',
 		company_name: 'Digital Empowerment Networks',
 		icon: freelance,
 		iconBg: '#383E56',
 		date: 'August 2024 - September 2024',
 		points: [
-			"Designed and deployed high impact machine learning models for predictive analytics and real world problem solving.",
-		"Trained and fine tuned deep learning models using TensorFlow and Keras to tackle complex challenges.",
-		"Optimized data pipelines, performed feature engineering, and enhanced model performance for accuracy and efficiency."
+			"Built ML models for predictive analytics and real-world solutions.",
+		"Trained and fine-tuned deep learning models with TensorFlow & Keras.",
+		"Optimized data pipelines and feature engineering for efficiency."
 		],
 	},
 ];
@@ -276,6 +313,35 @@ const projects = [{
 		source_code_link: 'https://github.com/muhammad-umar-ramzan/Umar-s-Chatbot.git',
 		website_link: 'https://umar-chatbot.streamlit.app/',
 	},
+	{
+		name: 'Customer Churn Prediction',
+		description:
+			'AI model predicting customer churn using advanced algorithms, hyperparameter tuning, and ANN for better insights.',
+		tags: [
+			{ name: 'ml', color: 'blue-text-gradient' },
+		{ name: 'feature engineering', color: 'green-text-gradient' },
+		{ name: 'hyperparameter tuning', color: 'pink-text-gradient' },
+		{ name: 'ann', color: 'yellow-text-gradient' },
+		],
+		image: customer,
+		source_code_link: '',
+		website_link: '',
+	},
+	{
+		name: 'Employee Attrition Prediction',
+		description:
+			'AI-powered model predicting employee attrition using ML algorithms, feature selection, and ANN for better accuracy.',
+		tags: [
+			{ name: 'ml', color: 'blue-text-gradient' },
+		{ name: 'EDA', color: 'green-text-gradient' },
+		{ name: 'data visualization', color: 'pink-text-gradient' },
+		{ name: 'deep learning', color: 'yellow-text-gradient' },
+		],
+		image: attrition,
+		source_code_link: 'https://github.com/muhammad-umar-ramzan/Technocolabs-Softwares/tree/6482ba1c285d91b9636db232e7a7e4a89cf76948/Employee%20Attrition%20Analysis%2C%20Visualization%20and%20Prediction',
+		website_link: 'https://www.linkedin.com/posts/m-umar-ramzan_datascience-machinelearning-employeeattrition-activity-7254873083969191937-uBc7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYfWJcBCxi6WTOMxV4yl1qjV7OWqvknYTc',
+	},
+	
 	// {
 	// 	name: 'SEO Content Optimizer',
 	// 	description:
