@@ -8,48 +8,28 @@ const taglineWords = [
     "Web Developer"
 ];
 
-const TypingEffect = () => {
-    const [displayedText, setDisplayedText] = useState('');
+const Hero = () => {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
-    const [letterIndex, setLetterIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
+    const [displayedText, setDisplayedText] = useState('');
+    const [charIndex, setCharIndex] = useState(0);
 
     useEffect(() => {
-        const currentWord = taglineWords[currentWordIndex];
-        let typingSpeed = isDeleting ? 50 : 100;
-        
-        if (!isDeleting && letterIndex === currentWord.length) {
-            setTimeout(() => setIsDeleting(true), 1000);
-            return;
+        const word = taglineWords[currentWordIndex];
+        if (charIndex < word.length) {
+            const timeout = setTimeout(() => {
+                setDisplayedText(word.slice(0, charIndex + 1));
+                setCharIndex(charIndex + 1);
+            }, 150); // Slower typing speed
+            return () => clearTimeout(timeout);
+        } else {
+            setTimeout(() => {
+                setCharIndex(0);
+                setDisplayedText('');
+                setCurrentWordIndex((prevIndex) => (prevIndex + 1) % taglineWords.length);
+            }, 1000);
         }
-        
-        if (isDeleting && letterIndex === 0) {
-            setIsDeleting(false);
-            setCurrentWordIndex((prevIndex) => (prevIndex + 1) % taglineWords.length);
-            return;
-        }
+    }, [charIndex, currentWordIndex]);
 
-        const timeout = setTimeout(() => {
-            setDisplayedText(
-                isDeleting
-                    ? currentWord.substring(0, letterIndex - 1)
-                    : currentWord.substring(0, letterIndex + 1)
-            );
-            setLetterIndex((prev) => (isDeleting ? prev - 1 : prev + 1));
-        }, typingSpeed);
-
-        return () => clearTimeout(timeout);
-    }, [letterIndex, isDeleting, currentWordIndex]);
-
-    return (
-        <span className="text-clr_blue font-bold">
-            {displayedText}
-            <span className="text-white">|</span>
-        </span>
-    );
-};
-
-const Hero = () => {
     return (
         <section className='relative w-full h-screen mx-auto'>
             <div
@@ -64,11 +44,16 @@ const Hero = () => {
                         Hi, I'm <span className='text-clr_blue'>Muhammad Umar</span>
                     </h1>
                     <p className={`${styles.heroSubText} relative z-10 mt-2 text-white-100 md:max-w-[640px] max-w-[460px]`}>
-                        I'm an experienced <TypingEffect />.
-                        <br />
+                        I'm an experienced {" "}
+                        <span className='text-clr_blue font-bold'>
+                            {displayedText}|
+                        </span>
+                        .<br />
                         I develop machine learning models, data-driven solutions, and web applications with seamless user interfaces. Contact me if you're ready to turn your ideas into reality!
                     </p>
                 </div>
+            </div>
+            <div className='max-h-[500px] xs:max-h-[600px] md:max-h-full h-full relative top-1/2 -translate-y-1/2'>
             </div>
             <div className='absolute xs:bottom-4 bottom-32 w-full flex justify-center items-center z-10'>
                 <a href='#about'>
