@@ -12,23 +12,30 @@ const Hero = () => {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState('');
     const [charIndex, setCharIndex] = useState(0);
+    const [deleting, setDeleting] = useState(false);
 
     useEffect(() => {
         const word = taglineWords[currentWordIndex];
-        if (charIndex < word.length) {
+        if (!deleting && charIndex < word.length) {
             const timeout = setTimeout(() => {
                 setDisplayedText(word.slice(0, charIndex + 1));
                 setCharIndex(charIndex + 1);
             }, 150); // Slower typing speed
             return () => clearTimeout(timeout);
+        } else if (deleting && charIndex > 0) {
+            const timeout = setTimeout(() => {
+                setDisplayedText(word.slice(0, charIndex - 1));
+                setCharIndex(charIndex - 1);
+            }, 100); // Deleting speed
+            return () => clearTimeout(timeout);
+        } else if (!deleting) {
+            setTimeout(() => setDeleting(true), 1000); // Wait before deleting
         } else {
-            setTimeout(() => {
-                setCharIndex(0);
-                setDisplayedText('');
-                setCurrentWordIndex((prevIndex) => (prevIndex + 1) % taglineWords.length);
-            }, 1000);
+            setDeleting(false);
+            setCharIndex(0);
+            setCurrentWordIndex((prevIndex) => (prevIndex + 1) % taglineWords.length);
         }
-    }, [charIndex, currentWordIndex]);
+    }, [charIndex, deleting, currentWordIndex]);
 
     return (
         <section className='relative w-full h-screen mx-auto'>
