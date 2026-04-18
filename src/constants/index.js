@@ -160,53 +160,33 @@ if (months > 12) {
 
 const experiences = [
 	{
-		title: 'AI Engineer',
-		company_name: 'WebFix',
+		title: 'Machine Learning Engineer',
+		company_name: 'Salnetic',
 		icon: freelance,
 		iconBg: '#383E56',
-		date: `Feb 2025 - Present`,
+		date: `July 2025 - Present`,
+		points: [
+			"Designed and developed AI agent workflows using LangGraph for multi-step reasoning systems.",
+		"Integrated Large Language Models (LLMs) into backend systems for generative AI applications.",
+		"Built scalable APIs using FastAPI to serve AI/ML models in production environments.",
+			"Worked on NLP-based solutions including text classification, summarization, and information retrieval.",
+		"Explored MCP-based architectures for managing tool-augmented LLM workflows and AI agents."
+			
+		],
+	},
+	{
+		title: 'AI Engineer Intern',
+		company_name: 'WebFix',
+		icon: doctoratwork,
+		iconBg: '#383E56',
+		date: `Feb 2025 - May 2025`,
 		points: [
 			"Developing AI chatbots with NLP for automated customer interactions.",
 		"Training deep learning models for predictions and recommendations.",
 		"Building scalable ML APIs for AI-driven web applications."
 		],
 	},
-	{
-		title: 'ML Engineer Intern',
-		company_name: 'Technocolabs Softwares',
-		icon: freelance,
-		iconBg: '#383E56',
-		date: `Octobor 2024 - Present`,
-		points: [
-			"Building ML models for employee attrition analysis and insights.",
-		"Performing data preprocessing, feature engineering, and visualization.",
-		"Integrating AI solutions into web applications with cross-team collaboration."
-		],
-	},
-	{
-		title: 'Data Science Intern',
-		company_name: 'Evostra Ventures',
-		icon: doctoratwork,
-		iconBg: '#383E56',
-		date: 'July 2024 - September 2024',
-		points: [
-			"Analyzed large-scale real-world datasets for insights.",
-		"Built high-quality ML datasets through web scraping.",
-		"Optimized predictive models for data-driven decisions."
-		],
-	},
-	{
-		title: 'ML Engineer Intern',
-		company_name: 'Digital Empowerment Networks',
-		icon: freelance,
-		iconBg: '#383E56',
-		date: 'August 2024 - September 2024',
-		points: [
-			"Built ML models for predictive analytics and real-world solutions.",
-		"Trained and fine-tuned deep learning models with TensorFlow & Keras.",
-		"Optimized data pipelines and feature engineering for efficiency."
-		],
-	},
+	
 ];
 
 const projects = [{
