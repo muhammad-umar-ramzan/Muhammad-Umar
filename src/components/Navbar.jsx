@@ -39,10 +39,15 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-15 h-12' />
-          <p className='flex text-white text-[18px] font-bold cursor-pointer hover:text-primary'>
-            Muhammad Umar
-          </p>
+          <img 
+  src={logo} 
+  alt='logo' 
+  className='w-12 h-12 rounded-full object-cover' 
+/>
+
+<p className='flex text-white text-[18px] font-bold cursor-pointer hover:text-primary'>
+  Muhammad Umar
+</p>
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
