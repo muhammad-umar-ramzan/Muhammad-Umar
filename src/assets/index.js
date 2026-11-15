@@ -28,7 +28,7 @@ import tensorflow from './tech/Tensorflow.png';
 import flask from './tech/flask.png';
 import doctoratwork from './company/doctoratwork.jpg';
 import doctoratwork1 from './company/doctoratwork1.png';
-import freelance from './company/freelance.jpg';
+import freelance from './company/techprysm_logo.jpeg';
 import house from './house.png';
 import skin from './skin.png';
 import posture from './posture.png';
