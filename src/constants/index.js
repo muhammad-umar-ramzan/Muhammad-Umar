@@ -161,7 +161,7 @@ if (months > 12) {
 const experiences = [
 	{
 		title: 'Machine Learning Engineer',
-		company_name: 'Salnetic',
+		company_name: 'Techprysm',
 		icon: freelance,
 		iconBg: '#383E56',
 		date: `July 2025 - Present`,
